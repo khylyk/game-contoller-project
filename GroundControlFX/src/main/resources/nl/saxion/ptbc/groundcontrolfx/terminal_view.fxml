@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="461.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.ptbc.groundcontrolfx.Controller.TerminalViewController">
+   <children>
+      <AnchorPane maxHeight="-Infinity" minHeight="0.0" minWidth="0.0" prefHeight="108.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <Label layoutX="262.0" layoutY="44.0" text="Terminal" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="toggleRadarButton" layoutX="14.0" layoutY="10.0" onAction="#toggleRadar" prefHeight="26.0" prefWidth="89.0" text="Toggle Radar" />
+            <Label layoutX="523.0" layoutY="5.0" />
+            <Label layoutX="445.0" layoutY="45.0" text="Save:" />
+            <Button fx:id="toggleStatusButton" layoutX="14.0" layoutY="40.0" onAction="#toggleStatus" prefHeight="27.0" prefWidth="89.0" text="Toggle Status" />
+            <Button layoutX="484.0" layoutY="40.0" mnemonicParsing="false" onAction="#saveTerminalLog" prefHeight="27.0" prefWidth="102.0" text="Terminal Log" />
+            <Button layoutX="484.0" layoutY="10.0" mnemonicParsing="false" onAction="#saveWayPoints" prefHeight="26.0" prefWidth="102.0" text="WayPoints" />
+            <Button layoutX="484.0" layoutY="71.0" mnemonicParsing="false" onAction="#saveCollisionPoints" prefHeight="26.0" prefWidth="102.0" text="Collision Points" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="101.0" minHeight="0.0" minWidth="0.0" prefHeight="360.0" prefWidth="600.0" style="-fx-background-color: #f5f5f5;">
+         <children>
+            <TextArea fx:id="terminalText" editable="false" layoutX="1.0" layoutY="6.0" pickOnBounds="false" prefHeight="319.0" prefWidth="598.0" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <TextField fx:id="inputField" layoutX="1.0" layoutY="327.0" onKeyPressed="#onEnterPressed" prefHeight="27.0" prefWidth="598.0" promptText="Type your command here" style="-fx-background-color: #dbdbd9;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

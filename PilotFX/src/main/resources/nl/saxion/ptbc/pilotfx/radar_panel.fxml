@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="750" prefWidth="750" spacing="10" style="-fx-background-color: #AED6F1" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.saxion.ptbc.pilotfx.Controller.RadarPanelController">
+
+    <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Radar Visualization" />
+
+    <Pane>
+        <Canvas fx:id="radarCanvas" height="700" style="-fx-background-color: white;" width="700" />
+        <Canvas fx:id="frogCanvas" height="700" style="-fx-background-color: white;" width="700" />
+    </Pane>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label fx:id="statusLabel" style="-fx-font-size: 16px;" text="Status: Waiting for radar data..." />
+    </HBox>
+
+    <VBox.margin>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </VBox.margin>
+</VBox>
